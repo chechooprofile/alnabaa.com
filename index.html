@@ -1,14 +1,16 @@
+
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ALNABAA WEB</title>
+    <!-- استدعاء مكتبة الأيقونات العالمية -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
         body {
-            /* 🎨 الخلفية التركوازية الفخمة والمريحة للعين */
             background: linear-gradient(135deg, #008080, #00a8a8, #48d1cc);
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
@@ -20,7 +22,7 @@
             box-sizing: border-box;
         }
 
-        /* كرت البروفايل الزجاجي */
+        /* كرت البروفايل */
         .profile-card {
             background: rgba(255, 255, 255, 0.88);
             backdrop-filter: blur(10px);
@@ -34,14 +36,28 @@
             box-shadow: 0 15px 35px rgba(0, 128, 128, 0.2);
         }
 
-        /* 👑 النص المزخرف الاحترافي */
-        h1 {
-            font-size: 26px;
-            color: #004d4d; 
+        /* 👑 حاوية العنوان مع النجوم لمنع النزول والخربطة */
+        .title-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
             margin: 0 0 8px 0;
+        }
+
+        .title-container i {
+            color: #004d4d;
+            font-size: 16px;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #004d4d; 
+            margin: 0;
             font-weight: 800;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+            white-space: nowrap; /* يمنع الكلمة من الانقسام */
         }
 
         .subtitle {
@@ -80,7 +96,7 @@
             box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
         }
 
-        /* زر الموقع التركوازي */
+        /* زر الموقع */
         .btn-store { 
             background: linear-gradient(135deg, #005f5f, #008080); 
         }
