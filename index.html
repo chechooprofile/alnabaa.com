@@ -3,104 +3,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ALNABBA WEB </title>
+    <title>ALNABAA WEB</title>
+    <!-- استدعاء مكتبة الأيقونات العالمية الشهيرة -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        /* تنسيق خلفية الصفحة كاملة */
-        body { 
-            background: linear-gradient(135deg, #74ebd5, #9face6); /* خلفية متدرجة الألوان */
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+        /* خلفية متدرجة ومتحركة تعطي حيوية للموقع */
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        body {
+            background: linear-gradient(-45deg, #74ebd5, #9face6, #667eea, #764ba2);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
         }
 
-        /* تنسيق بطاقة التعريف (الكرت الأبيض) */
+        /* كرت بروفايل بتأثير زجاجي عصري (Glassmorphism) */
         .profile-card {
-            background-color: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-            text-align: center;
-            max-width: 350px;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: 24px;
+            padding: 35px 25px;
             width: 100%;
+            max-width: 380px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
         }
 
-        /* تنسيق العنوان الرئيسي */
-        h1 { 
-            color: black; 
-            margin-bottom: 5px;
-            font-size: 28px;
+        .profile-card:hover {
+            transform: translateY(-5px);
         }
 
-        /* تنسيق النص الفرعي */
-        p { 
-            color: blue; 
+        /* تنسيق اللوجو مع تأثير نبض ناعم عند وضع الماوس */
+        .logo-img {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            object-fit: cover;
+        }
+
+        .logo-img:hover {
+            transform: scale(1.08) rotate(5deg);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #222;
+            margin: 15px 0 5px 0;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+        }
+
+        .subtitle {
             font-size: 16px;
-            margin-top: 0;
-            margin-bottom: 20px;
+            color: #666;
+            margin-bottom: 30px;
+            font-weight: 500;
         }
 
-        /* تنسيق الزر وتطويره */
-        .btn { 
-            background-color: crimson; 
-            color: white; 
-            border: none; 
-            padding: 12px 24px; 
+        /* تنسيق الأزرار الاحترافية المنفصلة */
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .btn-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 15px;
+            border-radius: 16px;
             font-size: 16px;
-            border-radius: 25px; 
-            cursor: pointer;
-            transition: all 0.3s ease; /* تجعل الحركة ناعمة */
-            width: 85%;
-            font-weight: bold;
+            font-weight: 600;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
         }
 
-        /* تأثير عند مرور الماوس فوق الزر */
-        .btn:hover { 
-            background-color: #0056b3; 
-            transform: translateY(-2px); /* يرتفع الزر قليلاً للأعلى */
-            box-shadow: 0 5px 10px rgba(0, 123, 255, 0.3);
+        /* ألوان وهوية كل زر */
+        .btn-whatsapp {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+        }
+        .btn-whatsapp:hover {
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
         }
 
-		.clickable-link:hover {
-    background: rgba(255, 255, 255, 0.25) !important;
-    transform: scale(1.03);
-}
+        .btn-store {
+            background: linear-gradient(135deg, #e52d27, #b31217); /* اللون الأحمر الفخم لمتجر النبع */
+        }
+        .btn-store:hover {
+            box-shadow: 0 6px 20px rgba(229, 45, 39, 0.4);
+        }
 
-		
+        .btn-link:hover {
+            transform: translateY(-3px);
+            filter: brightness(1.1);
+        }
+
+        /* أيقونات التواصل الاجتماعي في الأسفل */
+        .social-footer {
+            display: flex;
+            justify-content: center;
+            gap: 22px;
+            margin-top: 30px;
+            border-top: 1px solid rgba(0,0,0,0.08);
+            padding-top: 20px;
+        }
+
+        .social-icon {
+            color: #555;
+            font-size: 22px;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            transform: scale(1.2);
+        }
+        .icon-facebook:hover { color: #1877F2; }
+        .icon-tiktok:hover { color: #010101; }
+        .icon-telegram:hover { color: #0088cc; }
     </style>
 </head>
 <body>
 
-<div class="profile-card">
-	<div style="text-align: center; margin-bottom: 15px;">
-   <img src="alnabaa_logo_full_58640422.svg" alt="Logo" style="width: 100px; height: 100px; border-radius: 50%; border: 3px solid crimson; box-shadow: 0 4px 8px rgba(0,0,0,0.15); transition: transform 0.3s ease;">
-</div>
-    <h1>WELCOME TO ALNABAA </h1>
-	<h1>اهلا بكم في النبع  👋</h1>
-    
-  
-		<!-- البوكس الأحمر المطور -->
-<div style="background-color: crimson; padding: 20px; border-radius: 20px; box-shadow: 0 6px 15px rgba(220, 20, 60, 0.4); margin-top: 20px;">
-    <span style="color: white; font-weight: bold; display: block; margin-bottom: 15px; font-size: 16px; opacity: 0.9; letter-spacing: 0.5px;">تواصل معنا عبر:</span>
-    
-    <!-- زر الواتساب المطور -->
-    <a href="https://wa.me/9647837722993" target="_blank" class="clickable-link" style="color: white; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 10px; padding: 12px; font-size: 16px; font-weight: 600; background: rgba(255,255,255,0.1); border-radius: 12px; margin-bottom: 10px; transition: all 0.3s ease;">
-        🟢 WhatsApp 📱
-    </a>
-    
-    <!-- زر المتجر المطور -->
-    <a href="https://instagram.com/3chechoo" target="_blank" class="clickable-link" style="color: white; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 10px; padding: 12px; font-size: 16px; font-weight: 600; background: rgba(255,255,255,0.1); border-radius: 12px; transition: all 0.3s ease;">
-        🛍️ Our Store 🛒
-    </a>
-</div>
-	<div style="display: flex; justify-content: center; gap: 20px; margin-top: 20px; border-top: 1px solid #eee; padding-top: 15px;">
-    <a href="#" style="color: #555; text-decoration: none; font-size: 14px; font-weight: 500;">Telegram</a>
-    <a href="#" style="color: #555; text-decoration: none; font-size: 14px; font-weight: 500;">TikTok</a>
-    <a href="#" style="color: #555; text-decoration: none; font-size: 14px; font-weight: 500;">Facebook</a>
-</div>
-</div>
+    <div class="profile-card">
+        <!-- اللوجو الذكي الخاص بك -->
+        <img src="alnabaa_logo_full_58640422.svg" alt="Alnabaa Logo" class="logo-img">
+        
+        <h1>WELCOME TO ALNABAA</h1>
+        <div class="subtitle">اهلا بكم في النبع 👋</div>
+        
+        <!-- الأزرار الرئيسية المطورة -->
+        <div class="links-container">
+            <!-- زر الواتساب -->
+            <a href="https://wa.me/9647837722993" target="_blank" class="btn-link btn-whatsapp">
+                <i class="fab fa-whatsapp" style="font-size: 20px;"></i>
+                تواصل معنا عبر WhatsApp
+            </a>
+            
+            <!-- زر المتجر / إنستغرام -->
+            <a href="https://instagram.com/3chechoo" target="_blank" class="btn-link btn-store">
+                <i class="fab fa-instagram" style="font-size: 20px;"></i>
+                زيارة متجرنا على إنستغرام
+            </a>
+        </div>
+        
+        <!-- الأيقونات السفلية مع الروابط (يمكنك استبدال الرموز # بروابطك الفعلية لاحقاً) -->
+        <div class="social-footer">
+            <a href="https://instagram.com/3chechoo" target="_blank" class="social-icon icon-facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" target="_blank" class="social-icon icon-tiktok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" target="_blank" class="social-icon icon-telegram"><i class="fab fa-telegram"></i></a>
+        </div>
+    </div>
+
 </body>
 </html>
