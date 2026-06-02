@@ -4,21 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ALNABAA WEB</title>
-    <!-- استدعاء مكتبة الأيقونات العالمية الشهيرة -->
+    <!-- استدعاء مكتبة الأيقونات -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        /* خلفية متدرجة ومتحركة تعطي حيوية للموقع */
-        @keyframes gradientBG {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
         body {
-            background: linear-gradient(-45deg, #74ebd5, #9face6, #667eea, #764ba2);
-            background-size: 400% 400%;
-            animation: gradientBG 15s ease infinite;
+            background: linear-gradient(135deg, #5c6bc0, #3949ab, #283593);
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
             justify-content: center;
@@ -29,9 +20,8 @@
             box-sizing: border-box;
         }
 
-        /* كرت بروفايل بتأثير زجاجي عصري (Glassmorphism) */
         .profile-card {
-            background: rgba(255, 255, 255, 0.85);
+            background: rgba(255, 255, 255, 0.88);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.25);
@@ -40,28 +30,18 @@
             width: 100%;
             max-width: 380px;
             text-align: center;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
             transition: transform 0.3s ease;
         }
 
-        .profile-card:hover {
-            transform: translateY(-5px);
-        }
-
-        /* تنسيق اللوجو مع تأثير نبض ناعم عند وضع الماوس */
+        /* 🚀 حجم اللوجو الكبير جداً والواضح */
         .logo-img {
-            width: 110px;
-            height: 110px;
+            width: 170px; /* تم تكبيره أكثر إلى 170 لتلاحظ الفرق بوضوح */
+            height: 170px;
             border-radius: 50%;
             border: 4px solid #fff;
             box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             object-fit: cover;
-        }
-
-        .logo-img:hover {
-            transform: scale(1.08) rotate(5deg);
-            box-shadow: 0 12px 25px rgba(0,0,0,0.2);
         }
 
         h1 {
@@ -69,7 +49,6 @@
             color: #222;
             margin: 15px 0 5px 0;
             font-weight: 800;
-            letter-spacing: 0.5px;
         }
 
         .subtitle {
@@ -79,7 +58,6 @@
             font-weight: 500;
         }
 
-        /* تنسيق الأزرار الاحترافية المنفصلة */
         .links-container {
             display: flex;
             flex-direction: column;
@@ -98,30 +76,16 @@
             text-decoration: none;
             color: white;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
         }
 
-        /* ألوان وهوية كل زر */
-        .btn-whatsapp {
-            background: linear-gradient(135deg, #25D366, #128C7E);
-        }
-        .btn-whatsapp:hover {
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
-        }
-
-        .btn-store {
-            background: linear-gradient(135deg, #e52d27, #b31217); /* اللون الأحمر الفخم لمتجر النبع */
-        }
-        .btn-store:hover {
-            box-shadow: 0 6px 20px rgba(229, 45, 39, 0.4);
-        }
+        .btn-whatsapp { background: linear-gradient(135deg, #25D366, #128C7E); }
+        .btn-store { background: linear-gradient(135deg, #e52d27, #b31217); }
 
         .btn-link:hover {
             transform: translateY(-3px);
             filter: brightness(1.1);
         }
 
-        /* أيقونات التواصل الاجتماعي في الأسفل */
         .social-footer {
             display: flex;
             justify-content: center;
@@ -137,10 +101,8 @@
             transition: all 0.3s ease;
         }
 
-        .social-icon:hover {
-            transform: scale(1.2);
-        }
-        .icon-facebook:hover { color: #1877F2; }
+        .social-icon:hover { transform: scale(1.2); }
+        .icon-instagram:hover { color: #E1306C; }
         .icon-tiktok:hover { color: #010101; }
         .icon-telegram:hover { color: #0088cc; }
     </style>
@@ -148,30 +110,26 @@
 <body>
 
     <div class="profile-card">
-        <!-- اللوجو الذكي الخاص بك -->
         <img src="alnabaa_logo_full_58640422.svg" alt="Alnabaa Logo" class="logo-img">
         
         <h1>WELCOME TO ALNABAA</h1>
         <div class="subtitle">اهلا بكم في النبع 👋</div>
         
-        <!-- الأزرار الرئيسية المطورة -->
         <div class="links-container">
-            <!-- زر الواتساب -->
             <a href="https://wa.me/9647837722993" target="_blank" class="btn-link btn-whatsapp">
                 <i class="fab fa-whatsapp" style="font-size: 20px;"></i>
                 تواصل معنا عبر WhatsApp
             </a>
             
-            <!-- زر المتجر / إنستغرام -->
+            <!-- 🚀 هنا تم تغيير نص الزر وأيقونته إلى أيقونة الويب (fa-globe) -->
             <a href="https://instagram.com/3chechoo" target="_blank" class="btn-link btn-store">
-                <i class="fab fa-instagram" style="font-size: 20px;"></i>
-                زيارة متجرنا على إنستغرام
+                <i class="fas fa-globe" style="font-size: 20px;"></i>
+                زيارة موقعنا الإلكتروني
             </a>
         </div>
         
-        <!-- الأيقونات السفلية مع الروابط (يمكنك استبدال الرموز # بروابطك الفعلية لاحقاً) -->
         <div class="social-footer">
-            <a href="https://instagram.com/3chechoo" target="_blank" class="social-icon icon-facebook"><i class="fab fa-facebook"></i></a>
+            <a href="https://instagram.com/3chechoo" target="_blank" class="social-icon icon-instagram"><i class="fab fa-instagram"></i></a>
             <a href="#" target="_blank" class="social-icon icon-tiktok"><i class="fab fa-tiktok"></i></a>
             <a href="#" target="_blank" class="social-icon icon-telegram"><i class="fab fa-telegram"></i></a>
         </div>
