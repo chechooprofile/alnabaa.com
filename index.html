@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ALNABAA WEB</title>
-    <!-- استدعاء مكتبة الأيقونات -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
         body {
-            background: linear-gradient(135deg, #5c6bc0, #3949ab, #283593);
+            /* 🎨 الخلفية التركوازية الفخمة والمريحة للعين */
+            background: linear-gradient(135deg, #008080, #00a8a8, #48d1cc);
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
             justify-content: center;
@@ -20,40 +20,33 @@
             box-sizing: border-box;
         }
 
+        /* كرت البروفايل الزجاجي */
         .profile-card {
             background: rgba(255, 255, 255, 0.88);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.25);
+            border: 1px solid rgba(255, 255, 255, 0.3);
             border-radius: 24px;
             padding: 35px 25px;
             width: 100%;
             max-width: 380px;
             text-align: center;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 15px 35px rgba(0, 128, 128, 0.2);
         }
 
-        .logo-img {
-            width: 170px !important; 
-            height: 170px !important;
-            border-radius: 50%;
-            border: 4px solid #fff;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-            object-fit: cover;
-            display: inline-block;
-            margin: 0 auto;
-        }
-
+        /* 👑 النص المزخرف الاحترافي */
         h1 {
-            font-size: 24px;
-            color: #222;
-            margin: 15px 0 5px 0;
+            font-size: 26px;
+            color: #004d4d; 
+            margin: 0 0 8px 0;
             font-weight: 800;
+            letter-spacing: 1px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
         }
 
         .subtitle {
             font-size: 16px;
-            color: #666;
+            color: #4a6b6b;
             margin-bottom: 30px;
             font-weight: 500;
         }
@@ -76,45 +69,63 @@
             text-decoration: none;
             color: white;
             transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
         }
 
-        .btn-whatsapp { background: linear-gradient(135deg, #25D366, #128C7E); }
-        .btn-store { background: linear-gradient(135deg, #e52d27, #b31217); }
+        /* زر الواتساب */
+        .btn-whatsapp { 
+            background: linear-gradient(135deg, #25D366, #128C7E); 
+        }
+        .btn-whatsapp:hover {
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+        }
+
+        /* زر الموقع التركوازي */
+        .btn-store { 
+            background: linear-gradient(135deg, #005f5f, #008080); 
+        }
+        .btn-store:hover {
+            box-shadow: 0 6px 20px rgba(0, 128, 128, 0.4);
+        }
 
         .btn-link:hover {
             transform: translateY(-3px);
             filter: brightness(1.1);
         }
 
+        /* الأيقونات السفلية */
         .social-footer {
             display: flex;
             justify-content: center;
             gap: 22px;
             margin-top: 30px;
-            border-top: 1px solid rgba(0,0,0,0.08);
+            border-top: 1px solid rgba(0, 128, 128, 0.15);
             padding-top: 20px;
         }
 
         .social-icon {
-            color: #555;
+            color: #006666;
             font-size: 22px;
             transition: all 0.3s ease;
         }
 
-        .social-icon:hover { transform: scale(1.2); }
+        .social-icon:hover { 
+            transform: scale(1.2); 
+        }
         .icon-instagram:hover { color: #E1306C; }
-        .icon-tiktok:hover { color: #010101; }
+        .icon-tiktok:hover { color: #000000; }
         .icon-telegram:hover { color: #0088cc; }
     </style>
 </head>
 <body>
 
     <div class="profile-card">
-        <div style="width: 170px; height: 170px; margin: 0 auto 15px auto; border-radius: 50%; border: 4px solid #fff; box-shadow: 0 8px 20px rgba(0,0,0,0.15); overflow: hidden; display: flex; align-items: center; justify-content: center; background: #fff;">
-    <img src="alnabaa_logo_full_58640422.svg" alt="Alnabaa Logo" style="width: 100%; height: 100%; object-fit: contain;">
-</div>
         
-        <h1>WELCOME TO ALNABAA</h1>
+        <div style="width: 170px; height: 170px; margin: 0 auto 15px auto; border-radius: 50%; border: 4px solid #fff; box-shadow: 0 8px 20px rgba(0, 128, 128, 0.15); overflow: hidden; display: flex; align-items: center; justify-content: center; background: #fff;">
+            <img src="alnabaa_logo_full_58640422.svg" alt="Alnabaa Logo" style="width: 100%; height: 100%; object-fit: contain;">
+        </div>
+        
+        <h1>✦ 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 𝑻𝒐 𝑨𝒍𝒏𝒂𝒃𝒂𝒂 ✦</h1>
         <div class="subtitle">اهلا بكم في النبع 👋</div>
         
         <div class="links-container">
@@ -132,10 +143,9 @@
         <div class="social-footer">
             <a href="https://instagram.com/ALNABAA.group" target="_blank" class="social-icon icon-instagram"><i class="fab fa-instagram"></i></a>
             <a href="https://tiktok.com/@alnabaagroup" target="_blank" class="social-icon icon-tiktok"><i class="fab fa-tiktok"></i></a>
+        
         </div>
     </div>
 
 </body>
 </html>
-
-
